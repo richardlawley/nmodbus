@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Modbus</RootNamespace>
     <AssemblyName>Modbus</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -31,6 +31,7 @@
     <DocumentationFile>bin\Debug\Modbus.XML</DocumentationFile>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,7 @@
     <DocumentationFile>bin\Release\Modbus.XML</DocumentationFile>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SignedRelease|AnyCPU' ">
     <OutputPath>bin\SignedRelease\</OutputPath>
@@ -57,6 +59,7 @@
     <AssemblyOriginatorKeyFile>..\..\NModbusPublic.snk</AssemblyOriginatorKeyFile>
     <DelaySign>true</DelaySign>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
