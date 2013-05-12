@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Modbus.Device.ModbusDevice">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusDevice.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Modbus.Device.ModbusIpMaster">
+    <Position X="0.5" Y="8" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusIpMaster.cs</FileName>
+      <HashCode>EAAAAAAAIgAAIBAAAAACABAAAACAAAAAACAAACAAIAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.Device.ModbusMaster">
+    <Position X="3" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusMaster.cs</FileName>
+      <HashCode>EAgAAAAAIAAAIBAAAAACABAAAACAAgAAAAAAACEAAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Modbus.Device.ModbusSerialMaster">
+    <Position X="4.5" Y="8.25" Width="3" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusSerialMaster.cs</FileName>
+      <HashCode>AAAAAAAAAgAAEQCAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Modbus.Device.ModbusSlave">
+    <Position X="9.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusSlave.cs</FileName>
+      <HashCode>EAgAAAAAAAAAQGAAAAACAQAAAACAAgAAAABEAAAAAAg=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Modbus.Device.ModbusSerialSlave" Collapsed="true">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusSerialSlave.cs</FileName>
+      <HashCode>AAAAAAAAAAAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.Device.ModbusTcpSlave" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusTcpSlave.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAEAAQAAACAAQAAAAAAAEACAAAAAAQQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.Device.ModbusUdpSlave" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Device\ModbusUdpSlave.cs</FileName>
+      <HashCode>ACAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Modbus.Device.IModbusMaster">
+    <Position X="13.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Device\IModbusMaster.cs</FileName>
+      <HashCode>EAAAAAAAIAAAIBAAAAACABQAAACAAAAAAAAAACAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Modbus.Device.IModbusSerialMaster">
+    <Position X="13.5" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Device\IModbusSerialMaster.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

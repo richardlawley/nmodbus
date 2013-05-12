@@ -1,0 +1,141 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AA055F2-68E1-409F-A744-6081D7A27A57}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modbus.IntegrationTests</RootNamespace>
+    <AssemblyName>Modbus.IntegrationTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Test|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dist|AnyCPU' ">
+    <OutputPath>bin\Dist\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'SignedRelease|AnyCPU' ">
+    <OutputPath>bin\SignedRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\log4net\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MbUnit.Framework, Version=2.4.2.130, Culture=neutral, PublicKeyToken=5e72ecd30bc408d5">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\tools\MbUnit\MbUnit.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Unme.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=da57c01ae4598fdd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Unme\Unme.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Unme.MbUnit.Framework.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=da57c01ae4598fdd, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Unme\Unme.MbUnit.Framework.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomMessages\CustomFoobarRequest.cs" />
+    <Compile Include="CustomMessages\CustomFoobarResponse.cs" />
+    <Compile Include="CustomMessages\CustomReadHoldingRegistersRequest.cs" />
+    <Compile Include="CustomMessages\CustomReadHoldingRegistersResponse.cs" />
+    <Compile Include="CustomMessages\CustomWriteMultipleRegistersRequest.cs" />
+    <Compile Include="CustomMessages\CustomWriteMultipleRegistersResponse.cs" />
+    <Compile Include="EnronFixture.cs" />
+    <Compile Include="FtdUsbPortAdapterFixture.cs" />
+    <Compile Include="ModbusIpMasterFixture.cs" />
+    <Compile Include="NModbusUdpSlaveFixture.cs" />
+    <Compile Include="NModbusSerialAsciiMasterFixture.cs" />
+    <Compile Include="NModbusSerialAsciiMasterNModbusSerialAsciiSlaveFixture.cs" />
+    <Compile Include="NModbusSerialAsciiMasterJamodSerialAsciiSlaveFixture.cs" />
+    <Compile Include="ModbusMasterFixture.cs" />
+    <Compile Include="NModbusSerialRtuMasterFixture.cs" />
+    <Compile Include="NModbusSerialRtuMasterDl06SlaveFixture.cs" />
+    <Compile Include="NModbusSerialRtuMasterNModbusSerialRtuSlaveFixture.cs" />
+    <Compile Include="ModbusSerialMasterFixture.cs" />
+    <Compile Include="NModbusSerialRtuSlaveFixture.cs" />
+    <Compile Include="NModbusTcpMasterNModbusTcpSlaveFixture.cs" />
+    <Compile Include="NModbusTcpMasterJamodTcpSlaveFixture.cs" />
+    <Compile Include="NModbusTcpSlaveFixture.cs" />
+    <Compile Include="NModbusUdpMasterNModbusUdpSlaveFixture.cs" />
+    <Compile Include="NModbusUsbAsciiMasterFixture.cs" />
+    <Compile Include="NModbusUsbAsciiNModbusSerialAsciiFixture.cs" />
+    <Compile Include="NModbusUsbRtuMasterFixture.cs" />
+    <Compile Include="NModbusUsbRtuMasterNModbusSerialRtuSlaveFixture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestCases.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FtdAdapter\FtdAdapter.csproj">
+      <Project>{16FFB4F2-5556-439E-8729-92FB3425EF1F}</Project>
+      <Name>FtdAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modbus.Extensions\Modbus.Extensions.csproj">
+      <Project>{667F4D2C-C9DF-4CC4-A1A6-768F6E879CE5}</Project>
+      <Name>Modbus.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modbus\Modbus.csproj">
+      <Project>{FF96B252-2B24-44A1-A09C-6401B5D7ED23}</Project>
+      <Name>Modbus</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

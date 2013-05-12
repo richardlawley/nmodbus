@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Unme.Common</name>
+    </assembly>
+    <members>
+        <member name="T:Unme.Common.TimedLock">
+            <summary>
+            A lock that will block only for the specified TimeSpan value.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.SequenceUtility">
+            <summary>
+            Provides convenience methods for working with sequences of elements (IEnumerable&lt;T&gt;)/>.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            Invokes specified action with each element in the source sequence.
+            </summary>
+            <typeparam name="T">The type of element in the sequence.</typeparam>
+            <param name="source">The source sequence.</param>
+            <param name="action">The action to invoke.</param>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.ForEachWithIndex``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Int32})">
+            <summary>
+            Iterates the source applying the action with an index.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="action">The action.</param>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.WithIndex``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Iterates the source returning values with an index.
+            </summary>
+            <param name="source">The source.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Repeat``1(System.Func{``0})">
+            <summary>
+            Invokes the specified generator yielding a sequence of generated elements. To limit the number of results combine with <see cref="M:System.Linq.Enumerable.Take``1(System.Collections.Generic.IEnumerable{``0},System.Int32)"/>.
+            </summary>
+            <typeparam name="T">The type of element in the sequence.</typeparam>
+            <param name="generator">Returns a single element.</param>
+            <returns>An infinite sequence of elements produced by calling specified generator.</returns>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.ToSequence``1(``0)">
+            <summary>
+            Creates a sequence containing the specified element.
+            </summary>
+            <typeparam name="T">The type of element.</typeparam>
+            <param name="element">The element.</param>
+            <returns>An enumerable sequence of the specified elements</returns>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.ToSequence``1(``0,``0[])">
+            <summary>
+            Creates a sequence containing the specified elements.
+            </summary>
+            <typeparam name="T">The type of elements.</typeparam>
+            <param name="element">The first element.</param>
+            <param name="additional">Additional elements.</param>
+            <returns>An enumerable sequence of the specified elements.</returns>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Join``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Concatenates a specified separator String between each converted element of a specified collection, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Join``1(System.Collections.Generic.IEnumerable{``0},System.String,System.Func{``0,System.String})">
+            <summary>
+            Concatenates a specified separator String between each converted element of a specified collection, 
+            yielding a single concatenated string. 
+            </summary>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.ToReadOnly``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Converts a sequence to a readonly collection of &lt;T&gt;.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Concat``1(System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{``0}[])">
+            <summary>
+            Concatenates the specified sequences.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+            <param name="additionalItems">The additional items.</param>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Slice``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Int32)">
+            <summary>
+            Returns a slice of the given source.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="startIndex">The start index.</param>
+            <param name="size">The size.</param>
+        </member>
+        <member name="M:Unme.Common.SequenceUtility.Slices``1(System.Collections.Generic.IEnumerable{``0},System.Int32)">
+            <summary>
+            Iterates the specified sequence returning arrays of each slice of <paramref name="size"/> elements.
+            The last array may contain fewer that <paramref name="size"/> elements.
+            </summary>
+            <typeparam name="T">The sequence element type.</typeparam>
+            <param name="sequence">The source sequence.</param>
+            <param name="size">The desired slice size.</param>
+            <returns>A sequence of arrays containing the elements from the specified sequence.</returns>
+        </member>
+        <member name="T:Unme.Common.Reflect`1">
+            <summary>
+            Provides convenience methods for working with Reflection.
+            </summary>
+            <typeparam name="T">The type to reflect on.</typeparam>
+        </member>
+        <member name="M:Unme.Common.Reflect`1.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Gets the name of the property.
+            </summary>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="propertyAccessExpression">The property access expression.</param>
+            <returns></returns>
+            <remarks>
+            This method is significantly slower than simply using property name strings. But the
+            benefit of refactoring support, outweighs the cost of any single call. DO cache the result
+            of this method for performance.
+            </remarks>
+        </member>
+        <member name="T:Unme.Common.Tuple">
+            <summary>
+            A Pair Tuple.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.Tuple`2">
+            <summary>
+            A Pair Tuple.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.Tuple`2.#ctor(`0,`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unme.Common.Tuple`2"/> struct.
+            </summary>
+            <param name="first">The first.</param>
+            <param name="second">The second.</param>
+        </member>
+        <member name="M:Unme.Common.Tuple`2.Equals(Unme.Common.Tuple{`0,`1})">
+            <summary>
+            Indicates whether the current object is equal to another object of the same type.
+            </summary>
+            <param name="other">An object to compare with this object.</param>
+            <returns>
+            true if the current object is equal to the other parameter; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Unme.Common.Tuple`2.Equals(System.Object)">
+            <summary>
+            Indicates whether this instance and a specified object are equal.
+            </summary>
+            <param name="obj">Another object to compare to.</param>
+            <returns>
+            true if obj and this instance are the same type and represent the same value; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Unme.Common.Tuple`2.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>
+            A 32-bit signed integer that is the hash code for this instance.
+            </returns>
+        </member>
+        <member name="P:Unme.Common.Tuple`2.First">
+            <summary>
+            The first element
+            </summary>
+        </member>
+        <member name="P:Unme.Common.Tuple`2.Second">
+            <summary>
+            The second element
+            </summary>
+        </member>
+        <member name="M:Unme.Common.FunctionalUtility.Memoize``1(System.Func{``0})">
+            <summary>
+            Memoizes the given function.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.FunctionalUtility.Memoize``2(System.Func{``0,``1})">
+            <summary>
+            Memoizes the given function.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.FunctionalUtility.Memoize``3(System.Func{``0,``2},System.Func{``0,``1})">
+            <summary>
+            Memoizes the given function.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.FunctionalUtility.Memoize``3(System.Func{``0,``1,``2})">
+            <summary>
+            Memoizes the given function using the TInput1 argument as the key.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.FunctionalUtility.Memoize``4(System.Func{``0,``1,``3},System.Func{``0,``2})">
+            <summary>
+            Memoizes the given function.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.Scope">
+            <summary>
+            Enables invocation of an arbitrary <see cref="T:System.Action"/> when exiting a using block.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.Scope.Create(System.Action)">
+            <summary>
+            Returns an IDisposable instance that will invoke the specified action when disposed.
+            </summary>
+            <param name="onDispose">The action to invoke.</param>
+            <returns>An IDisposable instance.</returns>
+        </member>
+        <member name="M:Unme.Common.Scope.Dispose">
+            <summary>
+            Invokes the action if this is the first call to Dispose.
+            Subsequent calls do nothing. This method is thread-safe.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.ReaderWriterLockSlimUtility">
+            <summary>
+            Convenience methods for the ReaderWriterLockSlim type.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.ReaderWriterLockSlimUtility.ScopedEnterWriteLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Convenience method providing a Scoped write lock.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.ReaderWriterLockSlimUtility.ScopedEnterReadLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Convenience method providing a Scoped read lock.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.ReaderWriterLockSlimUtility.ScopedEnterUpgradeableReadLock(System.Threading.ReaderWriterLockSlim)">
+            <summary>
+            Convenience method providing a Scoped upgradeable read lock.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.StringUtility">
+            <summary>
+            Utility methods for strings.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.StringUtility.IsNullOrEmpty(System.String)">
+            <summary>
+            Indicates whether the specified System.String object is null or an System.String.Empty string.
+            </summary>
+            <param name="str">A System.String reference.</param>
+            <returns>
+            true if the value parameter is null or an empty string (""); otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Unme.Common.StringUtility.DoubleQuote(System.String)">
+            <summary>
+            Wraps the specified string in double quotes.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.StringUtility.SingleQuote(System.String)">
+            <summary>
+            Wraps the specified string in single quotes.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.NullReferenceExtension.NullReferenceExtension">
+            <summary>
+            Convenience methods for dealing with null references.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.NullReferenceExtension.NullReferenceExtension.IfNotNull``1(``0,System.Action{``0})">
+            <summary>
+            Performs the specified action if the element is not null.
+            </summary>
+            <typeparam name="T">Type of the element.</typeparam>
+            <param name="element">The element.</param>
+            <param name="action">The action to perform.</param>
+        </member>
+        <member name="M:Unme.Common.NullReferenceExtension.NullReferenceExtension.IfNotNull``2(``0,System.Func{``0,``1})">
+            <summary>
+            Performs the specified func and returns the result if the element is not null.
+            Returns the default value of the func's return type if the element is null.
+            </summary>
+            <typeparam name="T">Type of the element.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="element">The element.</param>
+            <param name="func">The func to perform.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Unme.Common.NullReferenceExtension.NullReferenceExtension.IfNotNull``2(``0,System.Func{``0,``1},``1)">
+            <summary>
+            Performs the specified func and returns the result if the element is not null.
+            Returns the specified default value if the element is null.
+            </summary>
+            <typeparam name="T">Type of the element.</typeparam>
+            <typeparam name="TResult">The type of the result.</typeparam>
+            <param name="element">The element.</param>
+            <param name="func">The func to perform.</param>
+            <param name="defaultValue">The value to return if the element is null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Unme.Common.NullReferenceExtension.NullReferenceExtension.Is``1(System.Object,System.Action{``0})">
+            <summary>
+            Perfom the specified action on the element if it is convertible to type TTarget.
+            </summary>
+        </member>
+        <member name="T:Unme.Common.LockTimeoutException">
+            <summary>
+            Custom exception for lock timeout.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.LockTimeoutException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unme.Common.LockTimeoutException"/> class.
+            </summary>
+        </member>
+        <member name="M:Unme.Common.LockTimeoutException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unme.Common.LockTimeoutException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Unme.Common.LockTimeoutException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Unme.Common.LockTimeoutException"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="T:Unme.Common.DictionaryUtility">
+            <summary>
+            IDictinary&lt;TKey, TValue&gt; utility methods.
+            </summary>
+            <remarks>
+            Implementations of IDictionary&lt;TKey, TValue&gt; can vary in whether they allow key 
+            to be a null reference. See: http://msdn2.microsoft.com/en-us/library/zyxt2e2h.aspx
+            </remarks>
+        </member>
+        <member name="M:Unme.Common.DisposableUtility.Dispose``1(``0@)">
+            <summary>
+            Disposes the specified item and sets its value to null.
+            </summary>
+        </member>
+    </members>
+</doc>

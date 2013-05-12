@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Modbus.IO.ModbusTransport">
+    <Position X="6.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusTransport.cs</FileName>
+      <HashCode>AAAAIgAAAAAIAEAAAAAAAAAAAAIAAAEBAAAAAAFAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusIpTransport">
+    <Position X="8.25" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusIpTransport.cs</FileName>
+      <HashCode>AAAAAAAAAAAAEAgAAAAAAAAAIAIAQAAAAAAAAIAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusAsciiTransport">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusAsciiTransport.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAEAAAAAAABAAAAAAAAEAAAAAAQAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusRtuTransport">
+    <Position X="2.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusRtuTransport.cs</FileName>
+      <HashCode>AAACAAAAAAAIAEAAAAAAAAAgAgAAAAEAAAABAQAAgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusSerialTransport">
+    <Position X="3.75" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusSerialTransport.cs</FileName>
+      <HashCode>AAAAAABAAAAAAEAAAABAAAAIAAQAAAAAAAAAAQFAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusUdpTransport">
+    <Position X="9.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusUdpTransport.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAEAAAAAAABAAAAgAAAEAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modbus.IO.ModbusTcpTransport">
+    <Position X="7.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IO\ModbusTcpTransport.cs</FileName>
+      <HashCode>AAAACAAAAAAIAEAAAAAAABAAAAAAAAEAAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>
