@@ -47,6 +47,11 @@ namespace Modbus.IO
 			set { _retries = value; }
 		}
 
+        /// <summary>
+        /// If set, Slave Busy exception causes retry count to be used.  If false, Slave Busy will cause infinite retries
+        /// </summary>
+        public bool SlaveBusyUsesRetryCount { get; set; }
+
 		/// <summary>
 		/// Gets or sets the number of milliseconds the tranport will wait before retrying a message after receiving 
 		/// an ACKNOWLEGE or SLAVE DEVICE BUSY slave exception response.
@@ -160,6 +165,9 @@ namespace Modbus.IO
 				{
 					if (se.SlaveExceptionCode != Modbus.SlaveDeviceBusy)
 						throw;
+
+                    if (SlaveBusyUsesRetryCount && attempt++ > _retries) 
+                        throw;
 
 					_logger.InfoFormat("Received SLAVE_DEVICE_BUSY exception response, waiting {0} milliseconds and resubmitting request.", _waitToRetryMilliseconds);
 					Thread.Sleep(WaitToRetryMilliseconds);

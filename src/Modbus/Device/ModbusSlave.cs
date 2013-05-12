@@ -140,7 +140,6 @@ namespace Modbus.Device
 			if (dataStore == null)
 				throw new ArgumentNullException("dataStore");
 
-
 			bool requestApplied = false;
 			response = null;
 
