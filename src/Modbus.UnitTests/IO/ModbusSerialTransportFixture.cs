@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.IO;
 using Modbus.Message;

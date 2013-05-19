@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.IO.Ports;
 using System.Text;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.IO;
 using Modbus.Message;
 using Modbus.UnitTests.Message;

@@ -1,5 +1,5 @@
 using System;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Message;
 using Modbus.Utility;
 
@@ -51,7 +51,7 @@ namespace Modbus.UnitTests.Utility
 			Assert.AreEqual(new byte[] { }, ModbusUtility.HexToBytes(""));			
 		}
 		
-		[Test, ExpectedArgumentNullException]
+		[Test, ExpectedException(typeof(ArgumentNullException))]
 		public void HexToBytesNull()
 		{
 			ModbusUtility.HexToBytes(null);
@@ -86,7 +86,7 @@ namespace Modbus.UnitTests.Utility
 			Assert.AreEqual(new byte[] { 255, 255 }, ModbusUtility.CalculateCrc(new byte[] { }));
 		}
 
-		[Test, ExpectedArgumentNullException]
+		[Test, ExpectedException(typeof(ArgumentNullException))]
 		public void CalculateCrcNull()
 		{
 			ModbusUtility.CalculateCrc(null);
@@ -108,7 +108,7 @@ namespace Modbus.UnitTests.Utility
 			Assert.AreEqual(252, ModbusUtility.CalculateLrc(new byte[] { 2, 1, 0, 0, 0, 1}));
 		}
 
-		[Test, ExpectedArgumentNullException]
+		[Test, ExpectedException(typeof(ArgumentNullException))]
 		public void CalculateLrcNull()
 		{
 			ModbusUtility.CalculateLrc(null);
@@ -127,7 +127,7 @@ namespace Modbus.UnitTests.Utility
 			Assert.AreEqual(new ushort[] { 1, 2 }, ModbusUtility.NetworkBytesToHostUInt16(new byte[] { 0, 1, 0, 2 }));
 		}
 
-		[Test, ExpectedArgumentNullException]
+		[Test, ExpectedException(typeof(ArgumentNullException))]
 		public void NetworkBytesToHostUInt16Null()
 		{
 			ModbusUtility.NetworkBytesToHostUInt16(null);

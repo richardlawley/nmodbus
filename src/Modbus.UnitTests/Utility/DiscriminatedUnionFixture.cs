@@ -1,5 +1,5 @@
 ﻿using System;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Utility;
 
 namespace Modbus.UnitTests.Utility

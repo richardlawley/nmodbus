@@ -1,5 +1,5 @@
 ﻿using System;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Device;
 
 namespace Modbus.UnitTests.Device
@@ -7,13 +7,13 @@ namespace Modbus.UnitTests.Device
 	[TestFixture]
 	public class TcpConnectionEventArgsFixture
 	{
-		[Test, ExpectedArgumentNullException]
+		[Test, ExpectedException(typeof(ArgumentNullException))]
 		public void TcpConnectionEventArgs_NullEndPoint()
 		{
 			new TcpConnectionEventArgs(null);
 		}
 
-		[Test, ExpectedArgumentException]
+		[Test, ExpectedException(typeof(ArgumentException))]
 		public void TcpConnectionEventArgs_EmptyEndPoint()
 		{
 			new TcpConnectionEventArgs(String.Empty);

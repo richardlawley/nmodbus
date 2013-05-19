@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Message;
 
 namespace Modbus.UnitTests.Message

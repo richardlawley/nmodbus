@@ -1,4 +1,4 @@
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.Message;
 

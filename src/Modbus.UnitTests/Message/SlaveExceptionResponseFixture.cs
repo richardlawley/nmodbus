@@ -1,4 +1,4 @@
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Message;
 
 namespace Modbus.UnitTests.Message

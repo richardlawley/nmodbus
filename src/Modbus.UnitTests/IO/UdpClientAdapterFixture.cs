@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.IO;
-using Unme.MbUnit.Framework.Extensions;
 
 namespace Modbus.UnitTests.IO
 {
@@ -15,14 +14,14 @@ namespace Modbus.UnitTests.IO
 			var adapter = new UdpClientAdapter(new UdpClient());
 
 			// buffer
-			AssertUtility.Throws<ArgumentNullException>(() => adapter.Read(null, 1, 1));
+			Assert.Throws<ArgumentNullException>(() => adapter.Read(null, 1, 1));
 			
 			// offset
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], -1, 2));
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 3, 3));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], -1, 2));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 3, 3));
 
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 0, -1));
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 1, 2));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 0, -1));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Read(new byte[2], 1, 2));
 		}
 
 		[Test]
@@ -31,11 +30,11 @@ namespace Modbus.UnitTests.IO
 			var adapter = new UdpClientAdapter(new UdpClient());
 
 			// buffer 
-			AssertUtility.Throws<ArgumentNullException>(() => adapter.Write(null, 1, 1));
+			Assert.Throws<ArgumentNullException>(() => adapter.Write(null, 1, 1));
 
 			// offset
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Write(new byte[2], -1, 2));
-			AssertUtility.Throws<ArgumentOutOfRangeException>(() => adapter.Write(new byte[2], 3, 3));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Write(new byte[2], -1, 2));
+			Assert.Throws<ArgumentOutOfRangeException>(() => adapter.Write(new byte[2], 3, 3));
 		}
 	}
 }

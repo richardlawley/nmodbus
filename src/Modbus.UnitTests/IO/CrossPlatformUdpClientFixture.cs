@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.IO;
 using Rhino.Mocks;
 

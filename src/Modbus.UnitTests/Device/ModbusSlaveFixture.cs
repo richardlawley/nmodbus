@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.Device;
 using Modbus.IO;
@@ -10,7 +10,6 @@ using Modbus.Message;
 using Modbus.UnitTests.Message;
 using Rhino.Mocks;
 using Unme.Common;
-using Unme.MbUnit.Framework.Extensions;
 using System.Diagnostics;
 
 namespace Modbus.UnitTests.Device
@@ -137,7 +136,7 @@ namespace Modbus.UnitTests.Device
 			MockRepository mocks = new MockRepository();
 			var slave = mocks.PartialMock<ModbusSlave>((byte) 1, new EmptyTransport());
 			
-			AssertUtility.Throws<ArgumentNullException>(() => slave.RegisterCustomFunction<TestMessage>(100, null));
+			Assert.Throws<ArgumentNullException>(() => slave.RegisterCustomFunction<TestMessage>(100, null));
 		}
 
 		[Test]
@@ -147,7 +146,7 @@ namespace Modbus.UnitTests.Device
 			var slave = mocks.PartialMock<ModbusSlave>((byte) 1, new EmptyTransport());
 
 			slave.RegisterCustomFunction<TestMessage>(100, (request, dataStore) => { throw new NotImplementedException(); });
-			AssertUtility.Throws<ArgumentException>(() => slave.RegisterCustomFunction<TestMessage>(100, (request, dataStore) => { throw new NotImplementedException(); }));
+			Assert.Throws<ArgumentException>(() => slave.RegisterCustomFunction<TestMessage>(100, (request, dataStore) => { throw new NotImplementedException(); }));
 		}
 
 		[Test]
@@ -159,7 +158,7 @@ namespace Modbus.UnitTests.Device
 			slave.RegisterCustomFunction<TestMessage>(100, (request, dataStore) => { throw new NotImplementedException(); });
 			slave.UnregisterCustomFunction(100);
 
-			AssertUtility.Throws<KeyNotFoundException>(() => slave.UnregisterCustomFunction(100));
+			Assert.Throws<KeyNotFoundException>(() => slave.UnregisterCustomFunction(100));
 		}
 
 		[Test]
@@ -168,7 +167,7 @@ namespace Modbus.UnitTests.Device
 			MockRepository mocks = new MockRepository();
 			var slave = mocks.PartialMock<ModbusSlave>((byte) 1, new EmptyTransport());
 
-			AssertUtility.Throws<KeyNotFoundException>(() => slave.UnregisterCustomFunction(100));
+			Assert.Throws<KeyNotFoundException>(() => slave.UnregisterCustomFunction(100));
 		}
 
 		[Test]
@@ -179,8 +178,8 @@ namespace Modbus.UnitTests.Device
 
 			IModbusMessage message;
 
-			AssertUtility.Throws<ArgumentNullException>(() => slave.TryApplyCustomMessage(null, new DataStore(), out message));
-			AssertUtility.Throws<ArgumentNullException>(() => slave.TryApplyCustomMessage(new ReadCoilsInputsRequest(), null, out message));
+			Assert.Throws<ArgumentNullException>(() => slave.TryApplyCustomMessage(null, new DataStore(), out message));
+			Assert.Throws<ArgumentNullException>(() => slave.TryApplyCustomMessage(new ReadCoilsInputsRequest(), null, out message));
 		}
 
 		[Test]

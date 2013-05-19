@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.IO;
 using Modbus.Message;

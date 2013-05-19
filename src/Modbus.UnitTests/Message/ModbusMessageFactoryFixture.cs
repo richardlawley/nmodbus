@@ -1,6 +1,6 @@
 using System;
 using System.Linq;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.Message;
 using Unme.Common;
@@ -270,7 +270,7 @@ namespace Modbus.UnitTests.Message
 			Assert.Fail();
 		}
 
-		[Test, ExpectedArgumentException]
+		[Test, ExpectedException(typeof(ArgumentException))]
 		public void CreateModbusRequestWithInvalidFunctionCode()
 		{
 			MockRepository mocks = new MockRepository();

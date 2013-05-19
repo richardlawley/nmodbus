@@ -1,5 +1,5 @@
 using System.Linq;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 
 namespace Modbus.UnitTests.Data
