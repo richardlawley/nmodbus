@@ -1,7 +1,7 @@
 using System;
 using System.Net.Sockets;
 using Modbus.Device;
-using MbUnit.Framework;
+using NUnit.Framework;
 using System.Globalization;
 
 namespace Modbus.IntegrationTests

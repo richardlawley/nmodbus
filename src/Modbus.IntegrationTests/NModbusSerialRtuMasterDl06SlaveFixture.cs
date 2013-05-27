@@ -1,5 +1,5 @@
 using Modbus.Device;
-using MbUnit.Framework;
+using NUnit.Framework;
 using System;
 
 namespace Modbus.IntegrationTests
@@ -62,5 +62,6 @@ namespace Modbus.IntegrationTests
 		/// </summary>
 		public override void ExecuteCustomMessage_WriteMultipleRegisters()
 		{
-		}	}
+		}
+	}
 }

@@ -1,7 +1,6 @@
 using System;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Device;
-using Unme.MbUnit.Framework.Extensions;
 
 namespace Modbus.IntegrationTests
 {
@@ -84,13 +83,13 @@ namespace Modbus.IntegrationTests
 		[Test]
 		public override void ExecuteCustomMessage_ReadHoldingRegisters()
 		{
-			AssertUtility.Throws<ArgumentException>(() => base.ExecuteCustomMessage_ReadHoldingRegisters());
+			Assert.Throws<ArgumentException>(() => base.ExecuteCustomMessage_ReadHoldingRegisters());
 		}
 
 		[Test]
 		public override void ExecuteCustomMessage_WriteMultipleRegisters()
 		{
-			AssertUtility.Throws<ArgumentException>(() => base.ExecuteCustomMessage_WriteMultipleRegisters());
+			Assert.Throws<ArgumentException>(() => base.ExecuteCustomMessage_WriteMultipleRegisters());
 		}
 	}
 }

@@ -4,7 +4,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Threading;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Device;
 using Unme.Common;
 

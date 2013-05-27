@@ -10,12 +10,11 @@ using System.Reflection;
 using System.Threading;
 using FtdAdapter;
 using log4net;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Data;
 using Modbus.Device;
 using Modbus.IntegrationTests.CustomMessages;
 using Unme.Common;
-using Unme.MbUnit.Framework.Extensions;
 
 namespace Modbus.IntegrationTests
 {

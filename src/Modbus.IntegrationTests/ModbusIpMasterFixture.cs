@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
 using System.Threading;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Device;
 
 namespace Modbus.IntegrationTests

@@ -1,6 +1,6 @@
 using System;
 using Modbus.Device;
-using MbUnit.Framework;
+using NUnit.Framework;
 using System.Globalization;
 
 namespace Modbus.IntegrationTests

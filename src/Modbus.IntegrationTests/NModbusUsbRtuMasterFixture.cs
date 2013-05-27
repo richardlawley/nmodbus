@@ -1,7 +1,7 @@
 using System;
 using FtdAdapter;
 using Modbus.Device;
-using MbUnit.Framework;
+using NUnit.Framework;
 
 namespace Modbus.IntegrationTests
 {

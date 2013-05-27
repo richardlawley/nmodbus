@@ -1,6 +1,6 @@
 using System.Linq;
 using System.Net.Sockets;
-using MbUnit.Framework;
+using NUnit.Framework;
 using Modbus.Device;
 using Modbus.IntegrationTests.CustomMessages;
 using Unme.Common;

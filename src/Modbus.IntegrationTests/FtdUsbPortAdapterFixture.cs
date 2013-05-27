@@ -1,5 +1,5 @@
 ﻿using FtdAdapter;
-using MbUnit.Framework;
+using NUnit.Framework;
 
 namespace Modbus.IntegrationTests
 {
