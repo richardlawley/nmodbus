@@ -63,9 +63,10 @@ namespace Modbus.IO
 
 		internal abstract bool ChecksumsMatch(IModbusMessage message, byte[] messageFrame);
 
-		internal override void OnValidateResponse(IModbusMessage request, IModbusMessage response)
+		internal override bool OnValidateResponse(IModbusMessage request, IModbusMessage response)
 		{
 			// no-op
+            return true;
 		}
 	}
 }

@@ -29,7 +29,7 @@ namespace Modbus.IO
 			throw new NotImplementedException();
 		}
 
-		internal override void OnValidateResponse(IModbusMessage request, IModbusMessage response)
+		internal override bool OnValidateResponse(IModbusMessage request, IModbusMessage response)
 		{
 			throw new NotImplementedException();
 		}
