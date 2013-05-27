@@ -59,7 +59,7 @@ namespace Modbus.IO
             _logger.DebugFormat("PDU: {0}", frameLength);
 
             byte[] frame = mbapHeader.Concat(messageFrame).ToArray();
-            _logger.InfoFormat("RX: {0}", frame.Join(", "));
+            _logger.DebugFormat("RX: {0}", frame.Join(", "));
 
             return frame;
         }
@@ -108,7 +108,7 @@ namespace Modbus.IO
         {
             message.TransactionId = GetNewTransactionId();
             byte[] frame = BuildMessageFrame(message);
-            _logger.InfoFormat("TX: {0}", frame.Join(", "));
+            _logger.DebugFormat("TX: {0}", frame.Join(", "));
             StreamResource.Write(frame, 0, frame.Length);
         }
 
