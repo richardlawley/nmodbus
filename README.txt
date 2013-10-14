@@ -1,22 +1,12 @@
-NModbus
+NModbus is a C# implementation of the Modbus Protocol.
 
-What is it? 
------------
-NModbus is a C# 3.0 implementation of the Modbus protocol.
-  
-More information at the NModbus project web site http://nmodbus.com/
+This is a fork of the primary repository, which is hosted on Google Code.
 
-
-The Latest Version
-------------------
-The latest binary distribution can be found on the NModbus project web site http://nmodbus.com/
-
-The latest source for the project can be found at the NModbus project's google code page http://code.google.com/p/nmodbus/
+Official Project Site: http://nmodbus.com/
+Official Source Repo: http://code.google.com/p/nmodbus/
 
 
-Documentation
--------------
-Documentation is available in chm format (NModbus.chm)
+
 
 
 License
